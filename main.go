@@ -19,11 +19,11 @@ func main() {
 	i = 1
 	fmt.Println("i is set to", i)
 
-	whatWasSaid := saySomething()
+	whatWasSaid, theOtherThingThatWhatSaid := saySomething()
 
-	fmt.Println("The function returned", whatWasSaid)
+	fmt.Println("The function returned", whatWasSaid, theOtherThingThatWhatSaid)
 }
 
-func saySomething() string {
-	return "something"
+func saySomething() (string, string) {
+	return "something", "else"
 }
